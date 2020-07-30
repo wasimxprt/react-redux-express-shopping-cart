@@ -6,7 +6,7 @@ const { authJwt } = require("../middlewares");
 const Product = require('../models/product.model');
 
 router.get('/', [authJwt.verifyToken], function (req, res, next) {
-    let perPage = 3;
+    let perPage = 30;
     let page = parseInt(req.query.page) || 0;
     let pages = 0;
     let nextUrl = '';

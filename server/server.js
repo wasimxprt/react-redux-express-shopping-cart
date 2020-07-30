@@ -10,7 +10,7 @@ const products = require('./routes/product.routes');
 const categories = require('./routes/categories.routes');
 
 var corsOptions = {
-    origin: "http://localhost:8081"
+    origin: "http://localhost:3000"
 };
 
 app.use(cors(corsOptions));
