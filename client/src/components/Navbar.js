@@ -1,29 +1,29 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { connect } from "react-redux"
+import { getNumbers } from "../actions/cartActions"
+// import cartActions from '../actions/cartActions';
+import { useSelector, useDispatch } from 'react-redux';
+
 
 function Navbar(props) {
 
-    const counter = useSelector(state => state.cart.cart);
-    console.log("counter ",counter);
-
-    useEffect(()=>{
-
-        console.log("called")
-    },[])
+    const cartData = useSelector(state => state.cart);
+    const dispatch = useDispatch();
 
     return (
         <header>
-            <div className="left_area">
+            <nav>
                 <h3>
                     Shopping <span>Cart</span>
                 </h3>
-            </div>
-            <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul className="nav navbar-nav navbar-right">
-                    <li><NavLink to="/my-cart"><i className="glyphicon glyphicon-shopping-cart"></i> My Cart</NavLink></li>
+                <ul>
+                    <li><NavLink to="/home">Home</NavLink></li>
+                    <li><NavLink to="/about">About</NavLink></li>
+                    <li><NavLink to="/my-cart">My Cart ({cartData.cart.length})</NavLink></li>
                 </ul>
-            </div>
+            </nav>
+
 
         </header>
     );

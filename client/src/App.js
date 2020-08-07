@@ -7,11 +7,6 @@ import Cart from './components/Cart';
 
 
 function App() {
-
-  //const prpoducts = useSelector(state => state.)
-  
-
-
   return (
     <BrowserRouter>
       <div className="App">
