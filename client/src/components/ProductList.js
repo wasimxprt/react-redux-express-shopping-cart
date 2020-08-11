@@ -8,6 +8,8 @@ import allActions from "../actions/index"
 function ProductList(props) {
 
     const [products, setProducts] = useState([]);
+    const [isNetworkError, setIsNetworkError] = useState(false);
+
     const dispatch = useDispatch();
 
     let options = {
@@ -18,22 +20,39 @@ function ProductList(props) {
 
     useEffect(() => {
         const fetchData = async () => {
-            const result = await axios(
-                'http://localhost:8080/products',
-            );
-            dispatch(allActions.productActions.setProducts(result.data.products))
-            setProducts(result.data.products);
+            try {
+                const result = await axios(
+                    'http://localhost:8080/products',
+                );
+                dispatch(allActions.productActions.setProducts(result.data.products))
+                setProducts(result.data.products);
+            } catch (error) {
+
+                if (!error.response) {
+                    setIsNetworkError(true)
+                } else {
+                    // http status code
+                    const code = error.response.status
+                    // response data
+                    const response = error.response.data
+                }
+            }
+            finally {
+
+            }
+
         };
 
         fetchData();
     }, []);
 
     return (
-        <section className="products">
+        <section className="products">{isNetworkError}
             {
-                products.map((product,index) => (
-                    <Product product={product} key={index} />
-                ))
+                isNetworkError ? <h1>Something went wrong! Unable to fetch product list</h1> :
+                    products.map((product, index) => (
+                        <Product product={product} key={index} />
+                    ))
             }
 
         </section>

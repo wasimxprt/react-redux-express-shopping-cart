@@ -20,7 +20,7 @@ function Navbar(props) {
                 <ul>
                     <li><NavLink to="/home">Home</NavLink></li>
                     <li><NavLink to="/about">About</NavLink></li>
-                    <li><NavLink to="/my-cart">My Cart ({cartData.cart.length})</NavLink></li>
+                    <li><NavLink to="/cart">My Cart ({cartData.cart.length})</NavLink></li>
                 </ul>
             </nav>
 
