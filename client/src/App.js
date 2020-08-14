@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import './main.scss';
+import './assets/scss/main.scss';
 import Home from './components/Home';
 import Cart from './components/Cart';
 

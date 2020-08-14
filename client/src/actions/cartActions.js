@@ -1,4 +1,5 @@
 import * as actions from "../constants/actionTypes";
+import productActions from "./productActions";
 
 const addToCart = (product) => {
     return {
