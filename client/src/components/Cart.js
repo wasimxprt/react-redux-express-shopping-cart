@@ -9,6 +9,8 @@ import { useSelector } from 'react-redux';
 function Cart(props) {
 
     const cartData = useSelector(state => state.cart);
+    const total = useSelector(state => state.cart.totalAmount);
+    cartData.cart.sort((a, b) => a.product.name.localeCompare(b.product.name))
 
     if (cartData.cart.length > 0) {
         return (<div className="container">
@@ -18,12 +20,16 @@ function Cart(props) {
                     <div className="title">
                         Shopping Bag
                 </div>
-                {
-                    cartData.cart.map((item)=>(
-                        <CartItem item={item.product} key={item.product._id} />
-                    ))
-                }
+                    {
+                        cartData.cart.map((item) => (
+                            <CartItem item={item.product} key={item.product._id} quantity={item.quantity} />
+                        ))
+                    }
 
+                    <div className="title title_top">
+                        Total
+                            <span>${total}</span>
+                    </div>
                 </div>
             </div>
 
@@ -33,7 +39,13 @@ function Cart(props) {
         return (
             <div className="container">
                 <Navbar />
-                <h1>Empty cart</h1>
+                <div className="cart">
+                    <div className="shopping-cart">
+                        <div className="title" style={{ textAlign: "center" }}>
+                            Your cart is empty!
+                        </div>
+                    </div>
+                </div>
             </div>);
     }
 

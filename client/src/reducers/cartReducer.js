@@ -2,6 +2,7 @@ import * as actions from "../constants/actionTypes";
 
 const initialState = {
     cart: [],
+    totalAmount: 0
 };
 
 const cartReducer = (state = initialState, action) => {
@@ -13,31 +14,75 @@ const cartReducer = (state = initialState, action) => {
         case 'ADD_TO_CART':
 
             cart.push(action.payload);
+            const total = Object.values(cart)
+                .reduce((result, cartItem) => result + cartItem.product.price * cartItem.quantity, 0);
+
 
             return {
                 ...state,
-                cart: cart
+                cart: cart,
+                totalAmount: total
             };
-        case 'UPDATE_CART_QUANTITY':
 
-            let item = cart.find(item => item.product._id == action.payload.productId);
+        case 'INCREASE_QUANTITY':
+            {
+                let item = cart.find(item => item.product._id == action.payload.productId);
 
-            let newCart = cart.filter(item => item.product._id != action.payload.productId);
+                var filtered = cart.filter(function (item) { return item.product._id != action.payload.productId; });
+                item.quantity += 1;
+                filtered.push(item);
+                filtered.sort((a, b) => a.product.name.localeCompare(b.product.name));
 
-            item.quantity = action.payload.quantity;
+                const total = Object.values(filtered)
+                    .reduce((result, cartItem) => result + cartItem.product.price * cartItem.quantity, 0);
 
-            newCart.push(item);
+                return {
+                    ...state,
+                    cart: filtered,
+                    totalAmount: total
+                };
+            }
 
-            return {
-                ...state,
-                cart: newCart
-            };
+
+        case 'DECREASE_QUANTITY':
+            {
+                let item = cart.find(item => item.product._id == action.payload.productId);
+
+                if (item.quantity === 1) {
+                    return {
+                        ...state,
+                        cart: cart.filter(item => item.product._id != action.payload.productId)
+                    }
+                }
+
+                var filtered = cart.filter(function (item) { return item.product._id != action.payload.productId; });
+                item.quantity -= 1;
+                filtered.push(item);
+                filtered.sort((a, b) => a.product.name.localeCompare(b.product.name));
+
+                const total = Object.values(filtered)
+                    .reduce((result, cartItem) => result + cartItem.product.price * cartItem.quantity, 0);
+
+                return {
+                    ...state,
+                    cart: filtered,
+                    totalAmount: total
+                };
+            }
 
         case 'REMOVE_FROM_CART':
-            return {
-                ...state,
-                cart: cart.filter(item => item.product._id != action.payload.productId)
-            };
+            {
+                let newCart = cart.filter(item => item.product._id != action.payload.productId);
+                const total = Object.values(newCart)
+                    .reduce((result, cartItem) => result + cartItem.product.price * cartItem.quantity, 0);
+
+                return {
+                    ...state,
+                    cart: newCart,
+                    totalAmount: total
+                };
+            }
+
         default:
             return state;
     }

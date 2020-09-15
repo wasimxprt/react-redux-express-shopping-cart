@@ -1,5 +1,4 @@
 import * as actions from "../constants/actionTypes";
-import productActions from "./productActions";
 
 const addToCart = (product) => {
     return {
@@ -21,13 +20,23 @@ const removeFromCart = (productId) => {
     }
 };
 
-const updateCartQuantity = (productId, quantity) => {
+
+const increaseQuantity = (productId) => {
 
     return {
-        type: actions.UPDATE_CART_QUANTITY,
+        type: actions.INCREASE_QUANTITY,
         payload: {
-            productId,
-            quantity: quantity
+            productId
+        }
+    }
+};
+
+const decreaseQuantity = (productId) => {
+
+    return {
+        type: actions.DECREASE_QUANTITY,
+        payload: {
+            productId
         }
     }
 };
@@ -35,5 +44,6 @@ const updateCartQuantity = (productId, quantity) => {
 export default {
     addToCart,
     removeFromCart,
-    updateCartQuantity
+    increaseQuantity,
+    decreaseQuantity
 }

@@ -1,0 +1,189 @@
+{
+    "products": [
+        {
+            "_id": "5f1d397ea15c6e1be4aa10df",
+            "name": "Awesome Steel Ball",
+            "price": 752,
+            "category": "Baby",
+            "description": "Est pariatur maiores ipsa culpa vero illum occaecati. Et voluptatem aut. Et nesciunt nihil. Laudantium dolores et. Enim doloribus distinctio. Et voluptatibus praesentium fugiat et esse labore sit ipsa.",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/4196ru-rkjL.jpg",
+            "__v": 0
+        },
+        {
+            "_id": "5f1d397ea15c6e1be4aa10e0",
+            "name": "Fantastic Plastic Cheese",
+            "price": 17,
+            "category": "Kids",
+            "description": "Reprehenderit accusantium harum nesciunt vel ut consequatur. Iusto tenetur dolorum. Dolor aut voluptatem porro.",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/4196ru-rkjL.jpg",
+            "__v": 0
+        },
+        {
+            "_id": "5f1d397ea15c6e1be4aa10e1",
+            "name": "Rustic Metal Pants",
+            "price": 391,
+            "category": "Baby",
+            "description": "Similique est a magnam omnis sit quia animi et. Fugiat quam quisquam in quis sunt et aliquam sequi nihil. Numquam officiis magnam quasi omnis aut consequatur. Saepe error illo natus tempora id. Expedita illum laudantium. Quis quis ea nostrum nihil.",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/4196ru-rkjL.jpg",
+            "__v": 0
+        },
+        {
+            "_id": "5f1d397ea15c6e1be4aa10e2",
+            "name": "Handcrafted Concrete Shoes",
+            "price": 999,
+            "category": "Movies",
+            "description": "Ratione qui voluptatem. Sunt totam omnis nam fugit facere sed blanditiis ut. Est perspiciatis facere blanditiis. Consequatur est atque. Sint et nihil.",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/4196ru-rkjL.jpg",
+            "__v": 0
+        },
+        {
+            "_id": "5f1d397ea15c6e1be4aa10e3",
+            "name": "Refined Rubber Salad",
+            "price": 220,
+            "category": "Kids",
+            "description": "Id aut provident distinctio. Ipsa nihil commodi modi voluptas delectus rem atque quis distinctio. Dolore enim similique vero. Exercitationem eos est possimus fuga incidunt. Vero et labore autem aut.",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/4196ru-rkjL.jpg",
+            "__v": 0
+        },
+        {
+            "_id": "5f1d397ea15c6e1be4aa10e4",
+            "name": "Ergonomic Wooden Towels",
+            "price": 226,
+            "category": "Computers",
+            "description": "Ut doloremque officiis qui. Placeat fugiat culpa blanditiis fugiat cum facilis. Explicabo vel eum sunt autem error omnis ipsum deserunt qui. Voluptatem et reiciendis consequatur ut animi voluptas aut tempore.",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/4196ru-rkjL.jpg",
+            "__v": 0
+        },
+        {
+            "_id": "5f1d397ea15c6e1be4aa10e5",
+            "name": "Generic Steel Gloves",
+            "price": 478,
+            "category": "Kids",
+            "description": "Saepe nihil veritatis libero vero qui voluptates. Ipsum molestiae fugit atque ea adipisci. Autem autem nemo. Fuga voluptatem qui nam nihil voluptatem dolorem. Dicta molestiae autem aut esse ut porro ut velit repellat.",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/4196ru-rkjL.jpg",
+            "__v": 0
+        },
+        {
+            "_id": "5f1d397ea15c6e1be4aa10e6",
+            "name": "Rustic Cotton Bacon",
+            "price": 712,
+            "category": "Books",
+            "description": "Eveniet nihil vel. Exercitationem iusto dolorem quibusdam quis deserunt voluptatum. Eveniet eius assumenda eaque.",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/4196ru-rkjL.jpg",
+            "__v": 0
+        },
+        {
+            "_id": "5f1d397ea15c6e1be4aa10e8",
+            "name": "Sleek Steel Towels",
+            "price": 1000,
+            "category": "Baby",
+            "description": "Quaerat voluptatibus ipsum et ipsa excepturi enim eveniet aut. Vitae rerum iusto dolorem quas. Est fugiat quo reprehenderit in quam debitis quaerat quis quia.",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/4196ru-rkjL.jpg",
+            "__v": 0
+        },
+        {
+            "_id": "5f1d397ea15c6e1be4aa10e9",
+            "name": "Gorgeous Steel Salad",
+            "price": 929,
+            "category": "Kids",
+            "description": "Aut minima eos. Voluptatem similique quo quaerat voluptatem. Quia nihil expedita ut omnis sed explicabo recusandae doloribus. Fuga adipisci et sequi aspernatur.",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/4196ru-rkjL.jpg",
+            "__v": 0
+        },
+        {
+            "_id": "5f1d397ea15c6e1be4aa10ea",
+            "name": "Small Plastic Gloves",
+            "price": 729,
+            "category": "Kids",
+            "description": "At sint animi aut. Impedit eum assumenda assumenda consectetur aliquam et. Nihil quas sint architecto. Atque porro maiores non. Molestiae quis amet sunt laborum. Sit explicabo voluptatum.",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/4196ru-rkjL.jpg",
+            "__v": 0
+        },
+        {
+            "_id": "5f1d397ea15c6e1be4aa10eb",
+            "name": "Unbranded Cotton Tuna",
+            "price": 565,
+            "category": "Baby",
+            "description": "Et harum quod. Voluptatibus molestiae voluptas accusantium. Iure soluta ea error dolores laborum et corrupti omnis.",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/4196ru-rkjL.jpg",
+            "__v": 0
+        },
+        {
+            "_id": "5f1d397ea15c6e1be4aa10ec",
+            "name": "Handmade Fresh Ball",
+            "price": 92,
+            "category": "Books",
+            "description": "Cumque quia omnis laudantium nam porro ab ipsa. Consequatur quam qui numquam ab. Officiis consequatur inventore a unde. Ea a voluptatibus in eaque error occaecati deserunt. Maxime veritatis corrupti omnis ab perferendis.",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/4196ru-rkjL.jpg",
+            "__v": 0
+        },
+        {
+            "_id": "5f1d397ea15c6e1be4aa10ed",
+            "name": "Handcrafted Wooden Pants",
+            "price": 800,
+            "category": "Books",
+            "description": "Et optio dolorem rerum temporibus necessitatibus doloremque deserunt magnam. Magni ea voluptate temporibus ut voluptatibus enim et magni. Explicabo amet ex perferendis fuga reprehenderit minima ut voluptatibus modi. Delectus accusantium mollitia quia nihil.",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/4196ru-rkjL.jpg",
+            "__v": 0
+        },
+        {
+            "_id": "5f1d397ea15c6e1be4aa10ee",
+            "name": "Tasty Steel Car",
+            "price": 732,
+            "category": "Books",
+            "description": "Delectus neque magni sed. Aut doloribus reprehenderit et temporibus sequi cum et error. Voluptates occaecati est eum et. Debitis ab ipsum sit non veritatis consequatur neque. Iste sunt nobis.",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/4196ru-rkjL.jpg",
+            "__v": 0
+        },
+        {
+            "_id": "5f1d397ea15c6e1be4aa10ef",
+            "name": "Licensed Soft Table",
+            "price": 7,
+            "category": "Shoes",
+            "description": "Occaecati provident quam laborum et culpa. In voluptatibus aut et mollitia dolorem ea ut est. Nesciunt quia et sed magni repellat voluptate sequi ut. Sit similique fugit aut nam. Tempora nihil numquam beatae eum amet doloribus unde. Ex hic ut.",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/4196ru-rkjL.jpg",
+            "__v": 0
+        },
+        {
+            "_id": "5f1d397ea15c6e1be4aa10e7",
+            "name": "Handcrafted Metal Sausages",
+            "price": 765,
+            "category": "Baby",
+            "description": "Officiis non eligendi omnis minima voluptatem. Voluptatum sed a incidunt eaque. Qui eum laboriosam voluptas veritatis ullam. Qui illo nisi. Enim fugiat aut. Dolorem corrupti nemo hic tempore dolor.",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/4196ru-rkjL.jpg",
+            "__v": 0
+        },
+        {
+            "_id": "5f1d397ea15c6e1be4aa10f0",
+            "name": "Intelligent Plastic Towels",
+            "price": 829,
+            "category": "Kids",
+            "description": "Quasi et et iusto ipsum est sint. Molestiae et corrupti voluptas corrupti blanditiis neque alias iusto. Architecto quibusdam itaque et autem.",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/4196ru-rkjL.jpg",
+            "__v": 0
+        },
+        {
+            "_id": "5f1d397ea15c6e1be4aa10f1",
+            "name": "Refined Fresh Chicken",
+            "price": 671,
+            "category": "Kids",
+            "description": "Illum odio iste minima voluptatem laudantium ipsum. Qui aut itaque dicta quasi. Aut doloremque consequatur libero ducimus. Alias rerum accusamus et inventore voluptas veritatis excepturi tempore maxime.",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/4196ru-rkjL.jpg",
+            "__v": 0
+        },
+        {
+            "_id": "5f1d397ea15c6e1be4aa10f2",
+            "name": "Fantastic Soft Ball",
+            "price": 13,
+            "category": "Electronics",
+            "description": "Excepturi ipsam quia porro qui excepturi maiores. Voluptatem distinctio et. Fuga aliquid voluptatibus fuga quam aut ratione est.",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/4196ru-rkjL.jpg",
+            "__v": 0
+        }
+    ],
+    "currentPage": 0,
+    "pages": 0,
+    "count": 20,
+    "prevUrl": "",
+    "nextUrl": "http://localhost:8080/products?page=1"
+}

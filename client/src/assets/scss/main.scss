@@ -186,6 +186,12 @@ h6 {
       flex-wrap: wrap;
       justify-content: space-between;
       padding: 20px 40px 0 40px;
+      &:first-child {
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
       h3 {
         font-size: 22px;
       }
@@ -275,8 +281,8 @@ label {
 .shopping-cart {
   width: 750px;
   margin: 80px auto;
-  background: #FFFFFF;
-  box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+  background: #ffffff;
+  box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
   display: flex;
   flex-direction: column;
@@ -286,6 +292,13 @@ label {
     color: #5e6977;
     font-size: 18px;
     font-weight: 400;
+  }
+  .title_top {
+    border-top: 1px solid #e1e8ee;
+    span {
+      float: right;
+      margin-right: 110px;
+    }
   }
 
   .item {
@@ -311,7 +324,7 @@ label {
   .delete-btn {
     width: 18px;
     height: 17px;
-    background: url('../img/delete-icn.svg') no-repeat center;
+    background: url("../img/delete-icn.svg") no-repeat center;
   }
 
   .like-btn {
@@ -348,7 +361,7 @@ label {
 
 .image {
   width: 100px;
-  img{
+  img {
     max-width: 100%;
     max-height: 100%;
   }
@@ -417,6 +430,38 @@ input:focus {
   font-size: 16px;
   color: #43484d;
   font-weight: 300;
+}
+
+.forms-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 70px;
+  
+  background: #ffffff;
+    box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+  form {
+    max-width: 320px;
+    padding: 50px;
+    .input-field{
+      margin: 20px 0;
+      label{
+        margin-right: 10px;
+        text-transform: none ;
+      }
+    }
+    .btn{
+      width: 100%;
+    }
+    .error{
+      color: red;
+    }
+    .success{
+      color: green;
+    }
+  }
 }
 
 @media (max-width: 920px) {

@@ -1,30 +1,23 @@
 import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { connect } from "react-redux"
-import { getNumbers } from "../actions/cartActions"
-// import cartActions from '../actions/cartActions';
-import { useSelector, useDispatch } from 'react-redux';
-
+import AuthService from '../services/AuthService';
+import SignedOutLinks from './SignedOutLinks';
+import SignedInLinks from './SignedInLinks';
 
 function Navbar(props) {
 
-    const cartData = useSelector(state => state.cart);
-    const dispatch = useDispatch();
+    const links = AuthService.isAuthenticated() ? <SignedInLinks /> : <SignedOutLinks />
 
     return (
         <header>
             <nav>
-                <h3>
-                    Shopping <span>Cart</span>
-                </h3>
-                <ul>
-                    <li><NavLink to="/home">Home</NavLink></li>
-                    <li><NavLink to="/about">About</NavLink></li>
-                    <li><NavLink to="/cart">My Cart ({cartData.cart.length})</NavLink></li>
-                </ul>
+                <NavLink to="/home">
+                    <h3>
+                        Shopping <span>Cart</span>
+                    </h3>
+                </NavLink>
+                {links}
             </nav>
-
-
         </header>
     );
 }

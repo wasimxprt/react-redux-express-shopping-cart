@@ -28,16 +28,16 @@ function CartItem(props) {
             </div>
 
             <div className="quantity">
-                <button className="plus-btn" type="button" name="button">
+                <button className="plus-btn" type="button" name="button" onClick={()=>dispatch(allActions.cartActions.increaseQuantity(product._id))}>
                     <img src={plus} alt="" />
                 </button>
-                <input type="text" name="name" defaultValue="1" />
-                <button className="minus-btn" type="button" name="button">
+                <input type="text" name="name" value={props.quantity} readOnly />
+                <button className="minus-btn" type="button" name="button" onClick={()=>dispatch(allActions.cartActions.decreaseQuantity(product._id))}>
                     <img src={minus} alt="" />
                 </button>
             </div>
 
-            <div className="total-price">${product.price}</div>
+            <div className="total-price">${product.price * props.quantity}</div>
         </div>
     );
 }
