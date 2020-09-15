@@ -1,6 +1,7 @@
 
 const initialState = {
-    products: []
+    products: [],
+    error: ""
 }
 
 const productReducer = (state = initialState, action) => {
@@ -8,7 +9,14 @@ const productReducer = (state = initialState, action) => {
         case "SET_PRODUCTS":
             return {
                 ...state,
-                products: action.payload
+                products: action.payload,
+                error: ""
+            }
+        case "SET_PRODUCTS_ERROR":
+            return {
+                ...state,
+                products: [],
+                error: action.payload.message
             }
         default:
             return state;

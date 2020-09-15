@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Product from './Product';
-import { useSelector, useDispatch } from 'react-redux';
-
+import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import allActions from "../actions/index"
 
@@ -14,7 +13,7 @@ function ProductList(props) {
 
     let options = {
         headers: {
-            "x-access-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmMWQzMWUzODQzYTI5M2I4ODc1NjJhOCIsImlhdCI6MTU5NTg0MTU1MSwiZXhwIjoxNTk1OTI3OTUxfQ.7R3-poUxvyISQB0jnc2fWbH-zbhGbEazhczV2dx-vh4"
+            "x-access-token": (localStorage.getItem("token") && typeof localStorage.getItem("token")!== 'undefined') ? JSON.parse(localStorage.getItem("token")) : ""
         }
     }
 
@@ -22,7 +21,7 @@ function ProductList(props) {
         const fetchData = async () => {
             try {
                 const result = await axios(
-                    'http://localhost:8080/products',
+                    'http://localhost:8080/products', options
                 );
                 dispatch(allActions.productActions.setProducts(result.data.products))
                 setProducts(result.data.products);
@@ -35,6 +34,8 @@ function ProductList(props) {
                     const code = error.response.status
                     // response data
                     const response = error.response.data
+                    
+                    dispatch(allActions.productActions.setProductsError(response));
                 }
             }
             finally {
@@ -47,7 +48,7 @@ function ProductList(props) {
     }, []);
 
     return (
-        <section className="products">{isNetworkError}
+        <section className="products">
             {
                 isNetworkError ? <h1>Something went wrong! Unable to fetch product list</h1> :
                     products.map((product, index) => (

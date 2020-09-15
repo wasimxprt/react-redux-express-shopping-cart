@@ -7,6 +7,14 @@ const setProducts = (products) => {
     }
 }
 
+const setProductsError = (error) => {
+    return {
+        type: actions.SET_PRODUCTS_ERROR,
+        payload: error
+    }
+}
+
 export default {
-    setProducts
+    setProducts,
+    setProductsError
 }
