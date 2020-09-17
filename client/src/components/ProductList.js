@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Product from './Product';
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
-import allActions from "../actions/index"
+import allActions from "../actions/index";
+import { startLoading, stopLoading } from '../actions/loadingActions'
 
 function ProductList(props) {
 
@@ -13,7 +14,7 @@ function ProductList(props) {
 
     let options = {
         headers: {
-            "x-access-token": (localStorage.getItem("token") && typeof localStorage.getItem("token")!== 'undefined') ? JSON.parse(localStorage.getItem("token")) : ""
+            "x-access-token": (localStorage.getItem("token") && typeof localStorage.getItem("token") !== 'undefined') ? JSON.parse(localStorage.getItem("token")) : ""
         }
     }
 
@@ -34,7 +35,7 @@ function ProductList(props) {
                     const code = error.response.status
                     // response data
                     const response = error.response.data
-                    
+
                     dispatch(allActions.productActions.setProductsError(response));
                 }
             }
