@@ -6,7 +6,7 @@ import AuthService from '../services/AuthService';
 import { useHistory } from "react-router-dom";
 
 function Signup(props) {
-    
+
     const history = useHistory();
     const auth = useSelector(state => state.auth)
     const dispatch = useDispatch();
@@ -31,7 +31,10 @@ function Signup(props) {
     }
     const submitHandler = (e) => {
         e.preventDefault();
-        dispatch(signup(values,history));
+        if (values.email !== "" && values.username != "" && values.password !== "") {
+            dispatch(signup(values,history));
+        }
+
     }
 
     return (

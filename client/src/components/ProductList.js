@@ -3,7 +3,7 @@ import Product from './Product';
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import allActions from "../actions/index";
-import { startLoading, stopLoading } from '../actions/loadingActions'
+import { startLoading, stopLoading } from '../actions/loadingActions';
 
 function ProductList(props) {
 
@@ -19,15 +19,18 @@ function ProductList(props) {
     }
 
     useEffect(() => {
+        dispatch(startLoading())
+
         const fetchData = async () => {
+
             try {
-                const result = await axios(
-                    'http://localhost:8080/products', options
-                );
+                const result = await axios('http://localhost:8080/products', options);
                 dispatch(allActions.productActions.setProducts(result.data.products))
                 setProducts(result.data.products);
+                dispatch(stopLoading());
+                
             } catch (error) {
-
+                dispatch(stopLoading());
                 if (!error.response) {
                     setIsNetworkError(true)
                 } else {

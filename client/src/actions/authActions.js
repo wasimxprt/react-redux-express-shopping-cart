@@ -23,8 +23,11 @@ function handleResponse(response) {
 }
 
 export const signin = (credentials,history) => {
+    
+
     return dispatch => {
         dispatch({ type: actions.LOGIN_REQUEST });
+        dispatch({type:"START_LOADING_REQUEST"});
 
         const requestOptions = {
             method: 'POST',
@@ -45,11 +48,12 @@ export const signin = (credentials,history) => {
 
                 localStorage.setItem('token', JSON.stringify(response.accessToken));
                 localStorage.setItem('user', JSON.stringify(loggedinUser));
-
+                dispatch({type:"STOP_LOADING_REQUEST"});
                 dispatch({ type: actions.LOGIN_SUCCESS, token: response.accessToken, user: loggedinUser });
                 history.push('/home')
             })
             .catch(error => {
+                dispatch({type:"STOP_LOADING_REQUEST"});
                 dispatch({ type: actions.LOGIN_FAILURE, error });
             })
     };
@@ -59,6 +63,7 @@ export const signin = (credentials,history) => {
 export const signup = (userData,history) => {
     return dispatch => {
         dispatch({ type: actions.SIGNUP_REQUEST });
+        dispatch({type:"START_LOADING_REQUEST"});
 
         const requestOptions = {
             method: 'POST',
@@ -71,10 +76,12 @@ export const signup = (userData,history) => {
             .then(handleResponse)
             .then(response => {
                 dispatch({ type: actions.SIGNUP_SUCCESS, response,message:"User registered usccessfully!" });
+                dispatch({type:"STOP_LOADING_REQUEST"});
                 history.push('/signin')
             })
             .catch(error => {
                 dispatch({ type: actions.SIGNUP_FAILURE, error });
+                dispatch({type:"STOP_LOADING_REQUEST"});
             })
     };
 }

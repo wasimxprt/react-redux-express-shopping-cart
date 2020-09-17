@@ -9,9 +9,9 @@ function Navbar(props) {
     const links = AuthService.isAuthenticated() ? <SignedInLinks /> : <SignedOutLinks />
 
     return (
-        <header>
+        <header data-test="header-cls" >
             <nav>
-                <NavLink to="/home">
+                <NavLink to="/home" data-test="site-name">
                     <h3>
                         Shopping <span>Cart</span>
                     </h3>
