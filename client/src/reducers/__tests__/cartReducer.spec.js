@@ -9,7 +9,7 @@ describe('cart reducer', () => {
     it('should handle ADD_TO_CART', () => {
         expect(
             cartReducer({
-                cart: [],
+                
                 totalAmount: 0
             },
                 {
