@@ -23,6 +23,11 @@
     "eject": "react-scripts eject",
     "e2e": "cypress open"
   },
+  "husky": {
+    "hooks": {
+      "pre-push": "CI=true npm test"
+    }
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -43,6 +48,7 @@
     "cypress-react-selector": "^2.0.3",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.4",
+    "husky": "^4.3.0",
     "moxios": "^0.4.0"
   }
 }
