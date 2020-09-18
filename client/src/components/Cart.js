@@ -15,7 +15,7 @@ function Cart(props) {
     if (cartData.cart.length > 0) {
         return (<div className="container">
             <Navbar />
-            <div className="cart">
+            <div className="cart" data-test="cart-component">
                 <div className="shopping-cart">
                     <div className="title">
                         Shopping Bag

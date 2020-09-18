@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`cart reducer should handle ADD_TO_CART 1`] = `
+Object {
+  "cart": Array [
+    Object {
+      "product": Object {
+        "_id": "5f1d397ea15c6e1be4aa10e2",
+        "name": "Handcrafted Concrete Shoes",
+        "price": 999,
+      },
+      "quantity": 1,
+    },
+  ],
+  "totalAmount": 999,
+}
+`;
+
+exports[`cart reducer should return the initial state 1`] = `
+Object {
+  "cart": Array [],
+  "totalAmount": 0,
+}
+`;

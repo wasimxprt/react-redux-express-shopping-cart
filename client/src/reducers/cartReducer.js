@@ -1,11 +1,11 @@
 import * as actions from "../constants/actionTypes";
 
-const initialState = {
+export const initialState = {
     cart: [],
     totalAmount: 0
 };
 
-const cartReducer = (state = initialState, action) => {
+export const cartReducer = (state = initialState, action) => {
 
     let cart = state.cart;
 

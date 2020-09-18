@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import allActions from "../actions/index";
 import { startLoading, stopLoading } from '../actions/loadingActions';
+import { fetchProducts } from '../actions/productActions'
 
 function ProductList(props) {
 
@@ -19,7 +20,7 @@ function ProductList(props) {
     }
 
     useEffect(() => {
-        dispatch(startLoading())
+        //dispatch(startLoading());
 
         const fetchData = async () => {
 
@@ -28,7 +29,7 @@ function ProductList(props) {
                 dispatch(allActions.productActions.setProducts(result.data.products))
                 setProducts(result.data.products);
                 dispatch(stopLoading());
-                
+
             } catch (error) {
                 dispatch(stopLoading());
                 if (!error.response) {
@@ -49,6 +50,8 @@ function ProductList(props) {
         };
 
         fetchData();
+        //dispatch(fetchProducts())
+
     }, []);
 
     return (
