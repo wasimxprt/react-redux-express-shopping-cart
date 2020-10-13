@@ -92,7 +92,9 @@ function initial() {
 
 // simple route
 app.get("/", (req, res) => {
-    res.json({ message: "Welcome to shopping application." });
+    res.send("hi")
+    //res.json({ message: "Welcome to shopping application." });
+    //res.render('index', { title: "Welcome to shopping application." })
 });
 
 // set port, listen for requests
