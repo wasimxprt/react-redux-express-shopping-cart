@@ -92,13 +92,13 @@ function initial() {
 
 // simple route
 app.get("/", (req, res) => {
-    res.send("hi")
-    //res.json({ message: "Welcome to shopping application." });
-    //res.render('index', { title: "Welcome to shopping application." })
+    //res.send("hi")
+    res.json({ message: "Welcome to shopping application." });
+    res.render('index', { title: "Welcome to shopping application." })
 });
 
 // set port, listen for requests
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}.`);
 });

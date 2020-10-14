@@ -23,11 +23,11 @@
     "eject": "react-scripts eject",
     "e2e": "cypress open"
   },
-  "husky": {
-    "hooks": {
-      "pre-push": "CI=true npm test"
-    }
-  },
+  // "husky": {
+  //   "hooks": {
+  //     "pre-push": "CI=true npm test"
+  //   }
+  // },
   "eslintConfig": {
     "extends": "react-app"
   },
